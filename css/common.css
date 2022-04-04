@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700;900&family=Noto+Sans+KR:wght@100;300;500;700;900&family=Noto+Sans:wght@100;300;500;700;900&display=swap");
+@import url(../css/reset.css);
+h3 {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: #fff;
+  font-size: 48px;
+}
+
+h4 {
+  color: #fff;
+  opacity: 70%;
+}
+
+p {
+  color: #fff;
+  opacity: 50%;
+}
+
+header {
+  display: none;
+}
+
+.frame {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.frame .pageBtns {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.frame .pageBtns button {
+  z-index: 100;
+  position: absolute;
+  top: calc(50% - 15px);
+  border: 0;
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'notoSans';
+  font-weight: 600;
+  font-size: 1em;
+  opacity: 20%;
+}
+
+.frame .pageBtns button::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.frame .pageBtns button:hover {
+  width: 150px;
+  opacity: 60%;
+  letter-spacing: 2px;
+}
+
+.frame .pageBtns button.left {
+  left: 20px;
+}
+
+.frame .pageBtns button.right {
+  right: 20px;
+}
+
+.frame .section_wrap {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #091f7c;
+  background: linear-gradient(27deg, #091f7c 0%, #0c4c95 18%, #0f58ad 36%, #285bbb 42%, #5261d4 55%, #7576e3 67%, #d2c6cb 86%, white 100%);
+}
+
+.frame .section_wrap section {
+  width: calc(100% / 3);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.frame .section_wrap section .title {
+  width: 40%;
+  height: 100%;
+  color: #fff;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.frame .section_wrap section .title .list {
+  margin-top: 12%;
+  padding-right: 30%;
+  opacity: 70%;
+}
+
+.frame .section_wrap section .title .list li {
+  border-top: 1px dotted #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frame .section_wrap section .title .list li span {
+  line-height: 3.750em;
+}
+
+.frame .section_wrap section .title .list li span:first-of-type {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.frame .section_wrap section .content {
+  background-color: #fff;
+  width: 60%;
+  height: 100%;
+  padding: 5vw;
+}
+
+.frame .section_wrap section.aboutMe {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.frame .section_wrap section.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frame .section_wrap section.main .intro {
+  width: 40vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frame .section_wrap section.main .intro .img {
+  width: 50%;
+}
+
+.frame .section_wrap section.main .intro .img img {
+  width: 100%;
+  width: 100%;
+}
+
+.frame .section_wrap section.myPjt .title {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.frame .section_wrap section.myPjt .content {
+  position: relative;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article {
+  height: 100vh;
+  width: 100%;
+  background-color: aqua;
+}
