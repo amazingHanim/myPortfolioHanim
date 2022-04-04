@@ -5,6 +5,7 @@ h3 {
   font-weight: 300;
   color: #fff;
   font-size: 48px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 h4 {
@@ -18,7 +19,12 @@ p {
 }
 
 header {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  z-index: 10;
 }
 
 .frame {
@@ -42,7 +48,7 @@ header {
   position: absolute;
   top: calc(50% - 15px);
   border: 0;
-  width: 100px;
+  width: 120px;
   height: 30px;
   background-color: transparent;
   -webkit-transition: all 0.3s;
@@ -52,7 +58,7 @@ header {
   font-family: 'notoSans';
   font-weight: 600;
   font-size: 1em;
-  opacity: 20%;
+  opacity: 10%;
 }
 
 .frame .pageBtns button::after {
@@ -66,7 +72,6 @@ header {
 }
 
 .frame .pageBtns button:hover {
-  width: 150px;
   opacity: 60%;
   letter-spacing: 2px;
 }
@@ -88,8 +93,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #091f7c;
-  background: linear-gradient(27deg, #091f7c 0%, #0c4c95 18%, #0f58ad 36%, #285bbb 42%, #5261d4 55%, #7576e3 67%, #d2c6cb 86%, white 100%);
+  background: #fafdff;
+  background: linear-gradient(135deg, #fafdff 0%, #2d91d0 16%, #3ca5e7 34%, #fffdf6 66%, #ebded4 100%);
 }
 
 .frame .section_wrap section {
@@ -118,13 +123,13 @@ header {
 }
 
 .frame .section_wrap section .title .list {
-  margin-top: 12%;
+  margin-top: 15%;
   padding-right: 30%;
   opacity: 70%;
 }
 
 .frame .section_wrap section .title .list li {
-  border-top: 1px dotted #fff;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +142,7 @@ header {
 }
 
 .frame .section_wrap section .title .list li span {
-  line-height: 3.750em;
+  line-height: 3.50em;
 }
 
 .frame .section_wrap section .title .list li span:first-of-type {
@@ -150,6 +155,61 @@ header {
   width: 60%;
   height: 100%;
   padding: 5vw;
+  z-index: 10;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.07);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: ()[3];
+      grid-template-rows: repeat(3);
+  gap: 10%;
+}
+
+.frame .section_wrap section .content ul.infoBox li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+.frame .section_wrap section .content ul.infoBox li.infoTitle {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.frame .section_wrap section .content ul.infoBox li.infoTitle span {
+  display: block;
+  width: 100%;
+  font-family: "Noto Sans";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.125em;
+  line-height: 2.5em;
+  color: #3e3e3e;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.frame .section_wrap section .content ul.infoBox li > span {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  color: #3e3e3e;
+  font-size: 1em;
+  line-height: 1.875em;
+}
+
+.frame .section_wrap section .content ul.infoBox.pro {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 
 .frame .section_wrap section.aboutMe {
@@ -190,12 +250,13 @@ header {
 }
 
 .frame .section_wrap section.main .intro .img {
-  width: 50%;
+  width: 40%;
 }
 
 .frame .section_wrap section.main .intro .img img {
   width: 100%;
   width: 100%;
+  opacity: 97%;
 }
 
 .frame .section_wrap section.myPjt .title {
@@ -205,11 +266,13 @@ header {
 
 .frame .section_wrap section.myPjt .content {
   position: relative;
+  overflow: scroll;
 }
 
 .frame .section_wrap section.myPjt .content .article_wrap {
   position: absolute;
   width: 100%;
+  height: inherit;
   top: 0;
   right: 0;
 }
@@ -217,5 +280,8 @@ header {
 .frame .section_wrap section.myPjt .content .article_wrap article {
   height: 100vh;
   width: 100%;
-  background-color: aqua;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article:nth-of-type(odd) {
+  background-color: #666;
 }
