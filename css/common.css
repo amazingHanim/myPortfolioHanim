@@ -18,21 +18,49 @@ p {
   opacity: 50%;
 }
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 100%;
-  z-index: 10;
-}
-
 .frame {
   position: relative;
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
+}
+
+.frame header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+}
+
+.frame header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+}
+
+.frame header ul li span {
+  line-height: 2.5em;
+  font-family: "Noto Sans EN";
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .frame .pageBtns {
@@ -103,6 +131,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 40px;
 }
 
 .frame .section_wrap section .title {
@@ -120,6 +149,24 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.frame .section_wrap section .title.t2 {
+  color: #3e3e3e;
+}
+
+.frame .section_wrap section .title.t2 h3 {
+  color: #3e3e3e;
+  text-align: end;
+}
+
+.frame .section_wrap section .title.t2 .list {
+  padding-left: 30%;
+  padding-right: 0;
+}
+
+.frame .section_wrap section .title.t2 .list li {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.7);
 }
 
 .frame .section_wrap section .title .list {
@@ -143,6 +190,7 @@ header {
 
 .frame .section_wrap section .title .list li span {
   line-height: 3.50em;
+  letter-spacing: 1px;
 }
 
 .frame .section_wrap section .title .list li span:first-of-type {
@@ -155,9 +203,21 @@ header {
   width: 60%;
   height: 100%;
   padding: 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 10;
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.07);
+}
+
+.frame .section_wrap section.aboutMe {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.frame .section_wrap section.aboutMe .content {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 1fr;
@@ -167,7 +227,7 @@ header {
   gap: 10%;
 }
 
-.frame .section_wrap section .content ul.infoBox li {
+.frame .section_wrap section.aboutMe .content ul.infoBox li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,12 +237,12 @@ header {
   gap: 10px;
 }
 
-.frame .section_wrap section .content ul.infoBox li.infoTitle {
+.frame .section_wrap section.aboutMe .content ul.infoBox li.infoTitle {
   margin-bottom: 20px;
   width: 100%;
 }
 
-.frame .section_wrap section .content ul.infoBox li.infoTitle span {
+.frame .section_wrap section.aboutMe .content ul.infoBox li.infoTitle span {
   display: block;
   width: 100%;
   font-family: "Noto Sans";
@@ -195,7 +255,7 @@ header {
   letter-spacing: 1px;
 }
 
-.frame .section_wrap section .content ul.infoBox li > span {
+.frame .section_wrap section.aboutMe .content ul.infoBox li > span {
   font-family: "Noto Sans KR";
   font-weight: 300;
   color: #3e3e3e;
@@ -203,20 +263,13 @@ header {
   line-height: 1.875em;
 }
 
-.frame .section_wrap section .content ul.infoBox.pro {
+.frame .section_wrap section.aboutMe .content ul.infoBox.pro {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
-}
-
-.frame .section_wrap section.aboutMe {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 
 .frame .section_wrap section.main {
@@ -265,23 +318,89 @@ header {
 }
 
 .frame .section_wrap section.myPjt .content {
-  position: relative;
   overflow: scroll;
+  padding: 0;
+  position: relative;
 }
 
 .frame .section_wrap section.myPjt .content .article_wrap {
   position: absolute;
-  width: 100%;
-  height: inherit;
   top: 0;
-  right: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .frame .section_wrap section.myPjt .content .article_wrap article {
-  height: 100vh;
+  padding: 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100vh - 40px);
   width: 100%;
 }
 
-.frame .section_wrap section.myPjt .content .article_wrap article:nth-of-type(odd) {
-  background-color: #666;
+.frame .section_wrap section.myPjt .content .article_wrap article .info {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info .img {
+  width: 100%;
+  height: 400px;
+  background-color: #333;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info h4 {
+  font-family: "Noto Sans KR";
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: #3e3e3e;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  font-size: 1.125em;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info h4 span {
+  font-size: 3.125em;
+  font-weight: 300;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info ul {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info ul li span {
+  line-height: 30px;
+  font-family: "Noto Sans KR";
+  color: #3e3e3e;
+  font-weight: 300;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info ul li span:nth-of-type(1) {
+  display: block;
+  width: 20%;
+  font-weight: 500;
 }
