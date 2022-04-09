@@ -121,8 +121,15 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #fafdff;
-  background: linear-gradient(135deg, #fafdff 0%, #2d91d0 16%, #3ca5e7 34%, #fffdf6 66%, #ebded4 100%);
+  background: #0391f1;
+  background: radial-gradient(circle, #0391f1 3%, #0d9eff 9%, #6dbbf1 20%, #fbe9e0 34%, #feccb0 38%, #3ebbfe 51%, #31b0ff 81%, #ebded4 94%);
+}
+
+.frame .section_wrap.on {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #22c3b2;
+  background: linear-gradient(305deg, #22c3b2 0%, #fdbb2d 100%);
 }
 
 .frame .section_wrap section {
@@ -285,8 +292,8 @@ p {
 }
 
 .frame .section_wrap section.main .intro {
-  width: 40vw;
-  height: 100%;
+  width: 100%;
+  height: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,16 +301,16 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .frame .section_wrap section.main .intro .img {
-  width: 40%;
+  width: 18%;
 }
 
 .frame .section_wrap section.main .intro .img img {
@@ -312,13 +319,20 @@ p {
   opacity: 97%;
 }
 
+.frame .section_wrap section.main .intro p {
+  text-align: center;
+}
+
 .frame .section_wrap section.myPjt .title {
   position: -webkit-sticky;
   position: sticky;
 }
 
+.frame .section_wrap section.myPjt .title li {
+  cursor: pointer;
+}
+
 .frame .section_wrap section.myPjt .content {
-  overflow: scroll;
   padding: 0;
   position: relative;
 }
