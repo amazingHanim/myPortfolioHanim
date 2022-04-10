@@ -45,7 +45,6 @@ $(function () {
         }
 
 
-
         $rightBtn.click(function () {
             show();
             if (clickNum < 2) {
@@ -91,8 +90,13 @@ $(function () {
             }
         )
 
-
+        var $titleList = $myPjc.find(".title li");
+        $titleList.click(function(){
+            $titleList.removeClass("on");
+            $(this).addClass("on")
+        });
     }
+    
 
     indexSlide();
     myProject();
