@@ -1,74 +1,125 @@
 $(function () {
 
-    function indexSlide() {
+    function index() {
         $frame = $(".frame"),
             $wrapper = $frame.find(".section_wrap"),
+            $btn = $frame.find(".pageBtns>button"),
             $leftBtn = $frame.find(".pageBtns>.left"),
-            $rightBtn = $frame.find(".pageBtns>.right"),
-            $intro = $frame.find(".intro");
+            $rightBtn = $frame.find(".pageBtns>.right");
+        $header = $frame.find("header"),
+            $menu = $header.find("li");
+
+
+
+        //slide start
         leftNum = -100; //고정값
         clickNum = 0; //변동값
         function reset() {
             $leftBtn.text("About Me");
             $rightBtn.text("My Projects");
-
         }
 
-        function show() {
+        function btnShow() {
             $leftBtn.show();
             $rightBtn.show();
-            $intro.show(200)
         }
 
         function txtChange() {
             if (clickNum == -1) {
+                $btn.show();
                 $leftBtn.hide();
                 $rightBtn.text("Menu");
-                $intro.hide(200)
-                $wrapper.css({background: "linear-gradient(82deg, rgba(34,195,178,1) 20%, rgba(223,255,94,1) 90%)"})
+                $wrapper.css({
+                    background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 25%,#d8ee77 40%,#abc04c 60%)"
+
+                })
 
             } else if (clickNum == 0) {
                 reset();
-                $wrapper.css({background: "radial-gradient(circle, rgba(3,145,241,1) 3%, rgba(13,158,255,1) 9%, rgba(109,187,241,1) 20%, rgba(251,233,224,1) 34%, rgba(254,204,176,1) 38%, rgba(62,187,254,1) 51%, rgba(49,176,255,1) 81%, rgba(235,222,212,1) 94%)"})
+                $btn.show();
+                $wrapper.css({
+                    background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 25%,#d8ee77 40%,#abc04c 60%)"
+
+                })
 
             } else if (clickNum == 1) {
-                $leftBtn.text("Menu");
-                $rightBtn.text("detail");
-                $intro.hide(200)
-                $wrapper.css({background: "linear-gradient(135deg, rgba(250, 253, 255, 1) 0%, rgba(45, 145, 208, 1) 16%, rgba(60, 165, 231, 1) 34%, rgba(255, 253, 246, 1) 66%, rgba(235, 222, 212, 1) 100%)"})
-
-
-            } else if (clickNum == 2) {
-                $leftBtn.text("My Projects");
+                $btn.show();
                 $rightBtn.hide();
+                $leftBtn.text("Menu");
+                $wrapper.css({
+                    background: "linear-gradient(340deg, #853981 5%, #515ada 70%, #efd5ff 90%)"
+
+                });
             }
+
+
+
+
+            // else if (clickNum == 2) {
+            //     $leftBtn.text("My Projects");
+            //     $rightBtn.hide();
+            // }
         }
 
 
+
+
+
+        //header 글씨 start
+        $menu.click(function () {
+            $menu.removeClass("on");
+            $(this).addClass("on")
+        })
+
+        function headerSelect(a) {
+            var currentIndex = a + 1;
+            $menu.removeClass("on");
+            $menu.eq(currentIndex).addClass("on");
+        }
+
         $rightBtn.click(function () {
-            show();
-            if (clickNum < 2) {
+            btnShow();
+            if (clickNum < 1) {
                 clickNum++;
                 $wrapper.animate({
                     left: leftNum * (clickNum + 1) + "%"
                 }, 300);
-                console.log(clickNum);
                 txtChange();
             }
+            headerSelect(clickNum)
         });
         $leftBtn.click(function () {
-            show();
+            btnShow();
             if (clickNum > -1) {
                 clickNum--;
                 $wrapper.animate({
                     left: leftNum * (clickNum + 1) + "%"
                 }, 300);
-                console.log(clickNum);
                 txtChange();
             }
+            headerSelect(clickNum);
 
         });
+        $menu.click(function () {
+            var currentIndex = $(this).index();
+            clickNum = currentIndex - 1;
+
+            if (clickNum < 1) {
+                $wrapper.animate({
+                    left: leftNum * (clickNum + 1) + "%"
+                }, 300);
+                txtChange();
+            } else if (-1 < clickNum) {
+                $wrapper.animate({
+                    left: leftNum * (clickNum + 1) + "%"
+                }, 300);
+                txtChange();
+            }
+        });
         reset();
+
+
+
     }
 
     function myProject() {
@@ -91,13 +142,13 @@ $(function () {
         )
 
         var $titleList = $myPjc.find(".title li");
-        $titleList.click(function(){
+        $titleList.click(function () {
             $titleList.removeClass("on");
             $(this).addClass("on")
         });
     }
-    
 
-    indexSlide();
+
+    index();
     myProject();
 });
