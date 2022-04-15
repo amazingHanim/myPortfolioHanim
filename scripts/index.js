@@ -30,7 +30,8 @@ $(function () {
                 $leftBtn.hide();
                 $rightBtn.text("Menu");
                 $wrapper.css({
-                    background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 25%,#d8ee77 40%,#abc04c 60%)"
+                    background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 24%,#4bdb9c 40%,#36d3d1 70%,#7ed1de 90%)"
+                    // background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 25%,#d8ee77 40%,#abc04c 60%)"
 
                 })
 

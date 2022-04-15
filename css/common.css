@@ -66,7 +66,8 @@ p {
 }
 
 .frame header ul li.on span {
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: 3px;
 }
 
 .frame header ul li:hover {
@@ -134,14 +135,14 @@ p {
 
 .frame .section_wrap {
   position: absolute;
-  top: 0;
+  top: 0px;
   left: -100%;
   width: 400%;
-  height: 100%;
+  height: calc(100%);
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: linear-gradient(340deg, #ec1d8b5d 35%, #bed4f0 42%, #0a7753 55%, #43960d 80%, #dbf5ab 90%);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background: linear-gradient(130deg, #f1f3ee 17%, #e0e6d9 25%, #d8ee77 40%, #abc04c 60%);
@@ -149,11 +150,10 @@ p {
 
 .frame .section_wrap section {
   width: calc(100% / 4);
-  height: 100%;
+  height: calc(100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 40px;
 }
 
 .frame .section_wrap section .title {
@@ -297,7 +297,8 @@ p {
       grid-template-columns: 3fr 1fr;
   -ms-grid-rows: ()[3];
       grid-template-rows: repeat(3);
-  gap: 10%;
+  gap: 5%;
+  height: calc(100%);
 }
 
 .frame .section_wrap section.aboutMe .content ul.infoBox li {
@@ -343,6 +344,66 @@ p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:not(.infoTitle) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  gap: 3%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:not(.infoTitle) span {
+  height: 100%;
+  width: 50%;
+  display: block;
+  text-align: start;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:not(.infoTitle) .bg {
+  position: relative;
+  width: 70%;
+  height: 25%;
+  background-color: #e3e3e3;
+  color: transparent;
+  border-radius: 30px;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:not(.infoTitle) .bg::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #23d297;
+  border-radius: 30px;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(2) .bg::after {
+  width: 90%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(3) .bg::after {
+  width: 85%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(4) .bg::after {
+  width: 50%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(5) .bg::after {
+  width: 65%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(6) .bg::after {
+  width: 40%;
+}
+
+.frame .section_wrap section.aboutMe .content ul.infoBox.skls li:nth-of-type(7) .bg::after {
+  width: 55%;
 }
 
 .frame .section_wrap section.main {
