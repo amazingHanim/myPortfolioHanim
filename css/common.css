@@ -503,7 +503,9 @@ p {
 }
 
 .frame .section_wrap section.myPjt .content .article_wrap article .info .img {
-  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 500px;
   height: 400px;
   overflow: hidden;
   display: -webkit-box;
@@ -524,6 +526,12 @@ p {
 
 .frame .section_wrap section.myPjt .content .article_wrap article .info .img:hover a {
   display: block;
+}
+
+.frame .section_wrap section.myPjt .content .article_wrap article .info .img:hover a:hover {
+  border-color: #fff;
+  background-color: #3e3e3e;
+  color: #fff;
 }
 
 .frame .section_wrap section.myPjt .content .article_wrap article .info .img img {

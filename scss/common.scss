@@ -479,7 +479,9 @@ p {
 
 
                                 .img {
-                                    width: 100%;
+                                    align-self: center;
+
+                                    width: 500px;
                                     height: 400px;
                                     overflow: hidden;
                                     display: flex;
@@ -492,6 +494,11 @@ p {
                                         }
                                         a{
                                             display: block;
+                                            &:hover{
+                                                border-color: #fff;
+                                                background-color: #3e3e3e;
+                                                color: #fff;
+                                            }
                                         }
                                     }
 
