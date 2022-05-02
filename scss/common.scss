@@ -10,18 +10,15 @@ $bbtm: 1px dashed rgba($color: #000, $alpha: 0.7);
 h3 {
     font-family: 'Montserrat';
     font-weight: 300;
-    color: #fff;
-    font-size: 48px;
-    text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.05);
+    font-size: 28px;
+
 }
 
 h4 {
-    color: #fff;
     opacity: 70%;
 }
 
 p {
-    color: #fff;
     opacity: 50%;
 }
 
@@ -409,7 +406,7 @@ p {
 
 
                 .intro {
-                    width: 100%;
+                    width: 60%;
                     height: 65%;
                     display: flex;
                     flex-direction: column;
@@ -419,7 +416,7 @@ p {
 
 
                     .img {
-                        width: 18%;
+                        width: 15vw;
 
                         img {
                             width: 100%;
@@ -428,10 +425,23 @@ p {
                         }
                     }
 
-                    h4 {}
+                    .txt {
+                        h3 {
+                            margin-top: 30px;
+                            font-family: $NotoKR;
+                            b{
+                                font-style: italic;
+                                font-weight: 500;
+                            }
+                        }
 
-                    p {
-                        text-align: center;
+                        h4 {}
+
+                        p {
+                            line-height: 30px;
+                            margin-top: 30px;
+                            text-align: center;
+                        }
                     }
 
 
@@ -488,13 +498,16 @@ p {
                                     justify-content: center;
                                     align-items: center;
                                     position: relative;
-                                    &:hover{
-                                        img{
+
+                                    &:hover {
+                                        img {
                                             opacity: 0.3;
                                         }
-                                        a{
+
+                                        a {
                                             display: block;
-                                            &:hover{
+
+                                            &:hover {
                                                 border-color: #fff;
                                                 background-color: #3e3e3e;
                                                 color: #fff;
@@ -507,15 +520,17 @@ p {
                                         transition: all 0.3s;
 
                                     }
-                                    a{
+
+                                    a {
                                         transition: all 0.3s;
 
                                         display: none;
                                         position: absolute;
-                                        width: 140px;height: 50px;
+                                        width: 140px;
+                                        height: 50px;
                                         top: calc(50% - 25px);
                                         left: calc(50% - 70px);
-                                        border:solid 1px #3e3e3e;
+                                        border: solid 1px #3e3e3e;
                                         background-color: #fff;
                                         line-height: 50px;
                                         text-align: center;
@@ -544,6 +559,7 @@ p {
                                     margin-top: 20px;
                                     display: flex;
                                     gap: 50px;
+
                                     ul {
                                         li {
                                             display: flex;
@@ -564,10 +580,11 @@ p {
                                             }
                                         }
                                     }
-                                    .txt{
+
+                                    .txt {
                                         width: 40%;
 
-                                        p{
+                                        p {
                                             color: #3e3e3e;
                                         }
                                     }

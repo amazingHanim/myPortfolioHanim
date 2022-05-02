@@ -3,18 +3,14 @@
 h3 {
   font-family: 'Montserrat';
   font-weight: 300;
-  color: #fff;
-  font-size: 48px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+  font-size: 28px;
 }
 
 h4 {
-  color: #fff;
   opacity: 70%;
 }
 
 p {
-  color: #fff;
   opacity: 50%;
 }
 
@@ -419,7 +415,7 @@ p {
 }
 
 .frame .section_wrap section.main .intro {
-  width: 100%;
+  width: 60%;
   height: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,7 +433,7 @@ p {
 }
 
 .frame .section_wrap section.main .intro .img {
-  width: 18%;
+  width: 15vw;
 }
 
 .frame .section_wrap section.main .intro .img img {
@@ -446,7 +442,19 @@ p {
   opacity: 97%;
 }
 
-.frame .section_wrap section.main .intro p {
+.frame .section_wrap section.main .intro .txt h3 {
+  margin-top: 30px;
+  font-family: "Noto Sans KR";
+}
+
+.frame .section_wrap section.main .intro .txt h3 b {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.frame .section_wrap section.main .intro .txt p {
+  line-height: 30px;
+  margin-top: 30px;
   text-align: center;
 }
 
