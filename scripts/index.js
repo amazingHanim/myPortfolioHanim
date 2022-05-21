@@ -149,6 +149,7 @@ $(function () {
             function(e){
                  //스타일가이드 버튼 클릭시 효과
                 e.preventDefault();
+                $popUpList.children().hide();
                 $popUpList.children().eq(artNum).show();
                 $popUp.fadeIn();
                 $popDelBtn.show();
