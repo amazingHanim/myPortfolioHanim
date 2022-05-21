@@ -1,5 +1,4 @@
 $(function () {
-
     function index() {
         $frame = $(".frame"),
             $wrapper = $frame.find(".section_wrap"),
@@ -52,10 +51,6 @@ $(function () {
 
                 });
             }
-
-
-
-
             // else if (clickNum == 2) {
             //     $leftBtn.text("My Projects");
             //     $rightBtn.hide();
@@ -130,7 +125,12 @@ $(function () {
             $article = $artWrap.children(),
             $list = $myPjc.find("ul.list"),
             $listItem = $list.children();
+            // $styleG_btn = $article.find(".btns");
+
         var $artNum = $article.length;
+        var $popUp = $("div.popUp"),
+            $popUpList = $popUpList.find("ul"),
+            $popDelBtn = $popUp.find(".delBtn");
 
         $listItem.click(
             function () {
@@ -147,6 +147,12 @@ $(function () {
             $titleList.removeClass("on");
             $(this).addClass("on")
         });
+        // $styleG_btn.click(
+        //     function(e){
+        //         e.preventDefault();
+        //         $popUp.show();
+        //     }
+        // )
     }
 
 
