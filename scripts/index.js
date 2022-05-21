@@ -119,26 +119,44 @@ $(function () {
     }
 
     function myProject() {
-        var $myPjc = $("section.myPjt"),
+        const $myPjc = $("section.myPjt"),
             $content = $myPjc.find(".content"),
             $artWrap = $content.children(),
             $article = $artWrap.children(),
             $list = $myPjc.find("ul.list"),
-            $listItem = $list.children();
-            // $styleG_btn = $article.find(".btns");
+            $listItem = $list.children(),
+            $styleG_btn = $article.find(".styleG");
 
-        var $artNum = $article.length;
-        var $popUp = $("div.popUp"),
-            $popUpList = $popUpList.find("ul"),
-            $popDelBtn = $popUp.find(".delBtn");
+
+        const $popUp = $(".frame>div.popUp");
+            $popUpList = $popUp.find("ul"),
+            $popDelBtn = $popUp.next(".delBtn");
+        artNum=0;
+    
 
         $listItem.click(
             function () {
+                //title 누르면 index에 맞추어 자동 scroll
                 $artSize = $article.innerHeight();
                 num = $(this).index();
                 $artWrap.animate({
                     top: -$artSize * num
-                }, 300)
+                }, 300);
+                artNum = num;
+            }
+        )
+        $styleG_btn.click(
+            function(e){
+                 //스타일가이드 버튼 클릭시 효과
+                e.preventDefault();
+                $popUpList.children().eq(artNum).show();
+                $popUp.fadeIn();
+                $popDelBtn.show();
+                $popDelBtn.click(function(){
+                    $popUp.fadeOut()
+                    $popDelBtn.hide();
+
+                })
             }
         )
 
@@ -147,12 +165,6 @@ $(function () {
             $titleList.removeClass("on");
             $(this).addClass("on")
         });
-        // $styleG_btn.click(
-        //     function(e){
-        //         e.preventDefault();
-        //         $popUp.show();
-        //     }
-        // )
     }
 
 

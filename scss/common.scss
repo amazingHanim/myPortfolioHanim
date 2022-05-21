@@ -611,21 +611,12 @@ p {
         height: 100vh;
         overflow: scroll;
         background-color: rgba(0, 0, 0, 0.7);
-        .delBtn{
-            position: absolute;
-            width: 30px;height: 30px;
-            top: 10%;right: 20%;
-            i{
-                font-size: 30px;
-                cursor: pointer;
-                color: #333;
-            }
-        }
         ul{
             width: 70%;
             margin: 0 auto;
 
             li{
+                display: none;
                 width: 100%;
                 overflow: scroll;
                 img{
@@ -635,5 +626,17 @@ p {
             }
         }
         
+    }
+    div.delBtn{
+        display: none;
+        z-index: 11;
+        position: absolute;
+        width: 30px;height: 30px;
+        top: 10%;right: 20%;
+        i{
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+        }
     }
 }

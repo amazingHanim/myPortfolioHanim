@@ -643,26 +643,13 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.frame div.popUp .delBtn {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 10%;
-  right: 20%;
-}
-
-.frame div.popUp .delBtn i {
-  font-size: 30px;
-  cursor: pointer;
-  color: #333;
-}
-
 .frame div.popUp ul {
   width: 70%;
   margin: 0 auto;
 }
 
 .frame div.popUp ul li {
+  display: none;
   width: 100%;
   overflow: scroll;
 }
@@ -670,4 +657,20 @@ p {
 .frame div.popUp ul li img {
   width: 100%;
   height: inherit;
+}
+
+.frame div.delBtn {
+  display: none;
+  z-index: 11;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10%;
+  right: 20%;
+}
+
+.frame div.delBtn i {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
 }
