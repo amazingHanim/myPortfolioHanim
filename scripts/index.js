@@ -148,9 +148,10 @@ $(function () {
         $styleG_btn.click(
             function(e){
                  //스타일가이드 버튼 클릭시 효과
-                e.preventDefault();
+                e.preventDefault(); //새로고침 방지
                 $popUpList.children().hide();
                 $popUpList.children().eq(artNum).show();
+                
                 $popUp.fadeIn();
                 $popDelBtn.show();
                 $popDelBtn.click(function(){
