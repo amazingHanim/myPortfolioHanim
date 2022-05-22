@@ -3,8 +3,8 @@ $(function () {
         $frame = $(".frame"),
             $wrapper = $frame.find(".section_wrap"),
             $btn = $frame.find(".pageBtns>button"),
-            $leftBtn = $frame.find(".pageBtns>.left"),
-            $rightBtn = $frame.find(".pageBtns>.right");
+            $leftBtn = $frame.find(".pageBtns>.left span"),
+            $rightBtn = $frame.find(".pageBtns>.right span");
         $header = $frame.find("header"),
             $menu = $header.find("li");
 
@@ -26,7 +26,7 @@ $(function () {
         function txtChange() {
             if (clickNum == -1) {
                 $btn.show();
-                $leftBtn.hide();
+                $leftBtn.hide(),$leftBtn.parent().hide();
                 $rightBtn.text("Menu");
                 $wrapper.css({
                     background: "linear-gradient(130deg, #f1f3ee 17%,#e0e6d9 24%,#4bdb9c 40%,#36d3d1 70%,#7ed1de 90%)"
@@ -44,7 +44,7 @@ $(function () {
 
             } else if (clickNum == 1) {
                 $btn.show();
-                $rightBtn.hide();
+                $rightBtn.hide(),$rightBtn.parent().hide();
                 $leftBtn.text("Menu");
                 $wrapper.css({
                     background: "linear-gradient(340deg, #853981 5%, #515ada 70%, #efd5ff 90%)"
